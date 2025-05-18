@@ -1,0 +1,79 @@
+/* App.css actualizado para mejor experiencia móvil */
+
+:root {
+  --color-primario: #0074c7;
+  --color-secundario: #fbc93d;
+  --color-fondo: #f8f9fa;
+  --color-texto: #212529;
+  --color-blanco: #ffffff;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--color-blanco) !important;
+}
+
+.nav-link:hover {
+  color: var(--color-secundario) !important;
+}
+
+.titulo-hover {
+  color: var(--color-primario);
+  transition: color 0.3s ease;
+}
+
+.titulo-hover:hover {
+  color: var(--color-secundario);
+}
+
+/* Validación */
+.is-invalid {
+  border-color: #dc3545;
+}
+.invalid-feedback {
+  display: block;
+}
+
+/* Modal fix para permitir scroll al cerrar */
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  backdrop-filter: blur(3px);
+}
+
+/* Responsive ajustes adicionales */
+@media (max-width: 768px) {
+  .navbar-nav {
+    background-color: var(--color-primario);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+.fondo-imagen {
+  background-image: url('foto1.jpg'); /* Reemplaza con la ruta correcta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
